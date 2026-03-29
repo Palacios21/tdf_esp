@@ -5,7 +5,7 @@ import pandas as pd
 import re
 from nltk.stem import SnowballStemmer
 
-st.title("🔍 Escribe un texto en Español")
+st.title(" 📖Escribe un texto en Español")
 
 # Documentos de ejemplo
 default_docs = """El Susurro del Viento
@@ -16,7 +16,7 @@ en un abrazo de pura libertad.
 Las flores despiertan con el sol,
 bañadas en rocío y esplendor,
 mientras el río en su caracol,
-murmura versos de paz y amor."""
+murmura versos de paz y amor.💕"""
 
 # Stemmer en español
 stemmer = SnowballStemmer("spanish")
