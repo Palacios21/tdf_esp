@@ -37,7 +37,7 @@ col1, col2 = st.columns([2, 1])
 
 with col1:
     text_input = st.text_area("📝 Documentos (uno por línea):", default_docs, height=150)
-    question = st.text_input("❓ Escribe tu pregunta:", "¿Qué elemento de la naturaleza es el que "danza con suavidad" y "acaricia las hojas" en la primera estrofa del poema?")
+    question = st.text_input("❓ Escribe tu pregunta:", "¿Qué elemento de la naturaleza es el que danza con suavidad y acaricia las hojas en la primera estrofa del poema?")
 
 with col2:
     st.markdown("### 💡 Preguntas sugeridas:")
