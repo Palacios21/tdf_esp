@@ -5,15 +5,18 @@ import pandas as pd
 import re
 from nltk.stem import SnowballStemmer
 
-st.title("🔍 Demo TF-IDF en Español")
+st.title("🔍 Escribe un texto en Español")
 
 # Documentos de ejemplo
-default_docs = """El perro ladra fuerte en el parque.
-El gato maúlla suavemente durante la noche.
-El perro y el gato juegan juntos en el jardín.
-Los niños corren y se divierten en el parque.
-La música suena muy alta en la fiesta.
-Los pájaros cantan hermosas melodías al amanecer."""
+default_docs = """El Susurro del Viento
+Bajo el palio del cielo azul,
+el viento danza con suavidad,
+acariciando las hojas con luz,
+en un abrazo de pura libertad.
+Las flores despiertan con el sol,
+bañadas en rocío y esplendor,
+mientras el río en su caracol,
+murmura versos de paz y amor."""
 
 # Stemmer en español
 stemmer = SnowballStemmer("spanish")
@@ -34,30 +37,30 @@ col1, col2 = st.columns([2, 1])
 
 with col1:
     text_input = st.text_area("📝 Documentos (uno por línea):", default_docs, height=150)
-    question = st.text_input("❓ Escribe tu pregunta:", "¿Dónde juegan el perro y el gato?")
+    question = st.text_input("❓ Escribe tu pregunta:", "¿Qué elemento de la naturaleza es el que "danza con suavidad" y "acaricia las hojas" en la primera estrofa del poema?")
 
 with col2:
     st.markdown("### 💡 Preguntas sugeridas:")
     
     # NUEVAS preguntas optimizadas para mayor similitud
-    if st.button("¿Dónde juegan el perro y el gato?", use_container_width=True):
-        st.session_state.question = "¿Dónde juegan el perro y el gato?"
+    if st.button("¿De qué color es el cielo??", use_container_width=True):
+        st.session_state.question = "¿De qué color es el cielo?"
         st.rerun()
     
-    if st.button("¿Qué hacen los niños en el parque?", use_container_width=True):
-        st.session_state.question = "¿Qué hacen los niños en el parque?"
+    if st.button("¿Qué sale a despertar a las flores?", use_container_width=True):
+        st.session_state.question = "¿Qué sale a despertar a las flores?"
         st.rerun()
         
-    if st.button("¿Cuándo cantan los pájaros?", use_container_width=True):
-        st.session_state.question = "¿Cuándo cantan los pájaros?"
+    if st.button("¿Qué es lo que danza suavemente?", use_container_width=True):
+        st.session_state.question = "¿Qué es lo que danza suavemente?"
         st.rerun()
         
-    if st.button("¿Dónde suena la música alta?", use_container_width=True):
-        st.session_state.question = "¿Dónde suena la música alta?"
+    if st.button("¿En qué lugar murmura el río?", use_container_width=True):
+        st.session_state.question = "¿En qué lugar murmura el río?"
         st.rerun()
         
-    if st.button("¿Qué animal maúlla durante la noche?", use_container_width=True):
-        st.session_state.question = "¿Qué animal maúlla durante la noche?"
+    if st.button("¿De qué están bañadas las flores al despertar?", use_container_width=True):
+        st.session_state.question = "¿De qué están bañadas las flores al despertar?"
         st.rerun()
 
 # Actualizar pregunta si se seleccionó una sugerida
